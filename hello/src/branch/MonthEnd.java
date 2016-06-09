@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @story  :
  */
 public class MonthEnd {
+
 	public static void main(String[] args) {
 		/**
 		 * 월을 입력하면 말일이 몇일인지 알려주는 
@@ -21,45 +22,18 @@ public class MonthEnd {
 		 * 잘못된 입력값입니다 라고 뜬다.
 		 **/
 		Scanner scanner = new Scanner(System.in);
-		int inmonth=0,monthlastday=0;
+		int monthlastday=0;
+		String inmonth="";
 		System.out.print("월을 입력 하세요 : ");
-		inmonth = scanner.nextInt();
-		switch (inmonth) {
-		case 1:
+		switch (scanner.next()) {
+		case "1":case"3":case"5":case"7":case "8":case "10":case "12":
 			monthlastday = 31;
 			break;
-		case 2:
+		case "4":case "6":case "9":case "11":
+			monthlastday = 30;
+			break;	
+		case "2":
 			monthlastday = 29;
-			break;
-		case 3:
-			monthlastday = 31;
-			break;
-		case 4:
-			monthlastday = 30;
-			break;
-		case 5:
-			monthlastday = 31;
-			break;
-		case 6:
-			monthlastday = 30;
-			break;
-		case 7:
-			monthlastday = 31;
-			break;
-		case 8:
-			monthlastday = 31;
-			break;
-		case 9:
-			monthlastday = 30;
-			break;
-		case 10:
-			monthlastday = 31;
-			break;
-		case 11:
-			monthlastday = 30;
-			break;
-		case 12:
-			monthlastday = 31;
 			break;
 		default:
 			System.out.print("월 입력이 잘못되었습니다.");

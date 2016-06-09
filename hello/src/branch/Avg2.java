@@ -26,10 +26,26 @@ public class Avg2 {
 	 * 40점 이상이면 F 학점입니다라고
 	 * 출력되게 해주세요
 	 */
+	public static boolean isNumber(String str) {
+	    //먼저 유효성 체크 검사부터....
+	        if(str==null || str.equals(""))
+	            return false;
+	    
+	    //이제부터 실제 변수의 문자열을 하나하나 확인해보는 식....    
+	        for(int i=0; i<str.length(); i++) {
+	            char ch = str.charAt(i);
+	            
+	            if(ch<'0' || ch>'9') {
+	                return false;
+	            }
+	        }
+	        return true;
+	    }
+	
 	public static void main(String[] args) {
 		//------------- 변수 선언부,준비,초기화(init)-----------------------------
 		Scanner scanner = new Scanner(System.in);
-		int kor=0,eng=0,math=0,total=0,avg=0;
+		int total=0,avg=0,eng=0,math=0,kor=0;
 		String name="",pass="";
 		// -------------------- 연산부 (알고리즘)----------------------------------
 		System.out.println("이름을 입력 하세요 : ");
