@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @file   :Avg.java
  * @story  :평균값 구하기 예제
  */
-public class Avg2 {
+public class Avg3 {
 	/**
 	 * 클라이언트에서 프로그램 개발 요청이 왔습니다.
 	 * 이름과 국,영,수 세과목점수를 입력받아서
@@ -25,6 +25,7 @@ public class Avg2 {
 	 * 50점 이상이면 E
 	 * 40점 이상이면 F 학점입니다라고
 	 * 출력되게 해주세요
+	 * 단] switch case 문으로 변경
 	 */
 	public static void main(String[] args) {
 		//------------- 변수 선언부,준비,초기화(init)-----------------------------
@@ -52,22 +53,31 @@ public class Avg2 {
 		}
 		total = kor+eng+math;
 		avg = total/3;
-		if (avg >= 90 && avg <= 100) {
+		switch (avg/10) {
+		case 10:case 9:
 			pass = "A";
-		} else if (avg < 90 && avg >= 80) {
+			break;
+		case 8:	
 			pass = "B";
-		} else if (avg < 80 && avg >= 70) {
+			break;
+		case 7:
 			pass = "C";
-		} else if (avg < 70 && avg >= 60) {
+			break;
+		case 6:	
 			pass = "D";
-		} else if (avg < 60 && avg >= 50) {
+			break;
+		case 5:	
 			pass = "E";
-		} else if(avg < 50 ){
-			pass = "F";			
-		} else {
+			break;
+		case 4: case 3: case 2: case 1:	
+			pass = "F";
+			break;
+
+		default:
 			System.out.println("평균 점수는 0~100 까지 가능 합니다. ");
 			return;
 		}
+		
 		//-----------------------출력부(콘솔)--------------------------------------
 		System.out.println("["+name+" : 총점 "+total+" 점, 평균 "
 				+avg+" 점,학점 : "+pass+" ]");
