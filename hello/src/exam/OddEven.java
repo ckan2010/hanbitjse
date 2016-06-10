@@ -28,10 +28,11 @@ public class OddEven {
 		int userNum = scanner.nextInt();
 		if (userNum != 0 && userNum != 1 ){
 			System.out.println("0,1 만 가능 합니다.");
+			return;
 		}
 		if (num%2 == userNum) {
 			wl = "WIN";
 		} 
-		System.out.println("random : "+num+" 홀짝여부 : "+num%2+" 승패여부 : "+wl);
+		System.out.println(wl);
 	}
 }
