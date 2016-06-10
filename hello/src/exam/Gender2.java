@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @file   :Gender.java
  * @story  :
  */
-public class Gender {
+public class Gender2 {
 	/**
 	 * 개발자님 저희 사이트는 주민번호 앞자리와 성별
 	 * 판별번호만 입력합니다.
@@ -29,7 +29,7 @@ public class Gender {
 	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);		
-		String name="",jumin="",gender="";
+		String name="",jumin="",gender="여";
 		System.out.println("성명 : ");
 		name = scanner.next();
 		System.out.println("주민번호 [예 xxxxxx-x] : ");
@@ -39,13 +39,8 @@ public class Gender {
 			System.out.println("남여 구분은 0,9는 없습니다. ");
 			return;
 		}
-		switch (gendergubun%2) {
-		case 1:
+		if (gendergubun%2 == 1) {
 			gender = "남";
-		    break;
-		default:
-			gender = "여";
-			break;
 		}
 		System.out.println(name+"("+gender+")");
 	}
