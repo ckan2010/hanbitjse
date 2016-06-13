@@ -49,7 +49,7 @@ public class MonthEnd2 {
 			System.out.print("년월 입력이 잘못되었습니다.");
 			return;
 		}
-		System.out.print(year+"년"+month+"월"+monthlastday+"일");
+		System.out.printf("%d%s%d%s%d%s",year,"년",month,"월",monthlastday,"일");
 	}
 
 }

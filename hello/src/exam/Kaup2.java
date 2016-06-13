@@ -48,10 +48,12 @@ public class Kaup2 {
 			System.out.println(name+" 님 result 지수 구하기 오류입니다.");
 			return;
 		}
+		/*d = Double.parseDouble(String.format("%.2f", bmigisu));
 		System.out.println(name+" 은 result지수는 "
-				+Double.parseDouble(String.format("%.2f", bmigisu))+" 이고,"
-				+ " "+result+" 이다 ");
-		
+				+d+" 이고,"
+				+ " "+result+" 이다 ");*/
+		// 위 문장을 printf 로 변경하시오	
+		System.out.printf("%s%s%.2f%s%s%s",name," 은 result 지수는 ",bmigisu," 이고, ",result," 이다 ");
 	}
 
 }
