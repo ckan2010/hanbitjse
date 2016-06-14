@@ -17,11 +17,16 @@ public class Controller {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		String menu = "";
+		int i = 0,j = 0,studCount = 0;
 		Calc calc = new Calc();
 		Kaup kaup = new Kaup();
 		LastDay lastDay = new LastDay();
 		Grade grade = new Grade();
 		Hakbun hakbun = new Hakbun();
+		MaxMin maxmin = new MaxMin();
+		Tax1 tax1 = new Tax1();
+		Gender gender = new Gender();
+		TimeCalc timecalc = new TimeCalc();
 		while (true) {
 			menu = JOptionPane.showInputDialog("1.계산기 "
 					+ "2.카우프구하기 "
@@ -58,8 +63,7 @@ public class Controller {
 				break;
 			case "5":
 				System.out.println("학생 수가 몇명입니까? ");
-				int studCount = s.nextInt();
-				int i = 0,j = 0;
+				studCount = s.nextInt();
 				System.out.println(studCount + " 명의 이름,나이를 입력하세요 ");
 				String inputStudunte[] = new String[studCount];
 				int inputAge[] = new int[studCount];
@@ -78,6 +82,32 @@ public class Controller {
 					System.out.println(hakbun.hakbun(inputStudunte[i], inputAge[i], inputId[i]));
 				}
 				System.out.println("===================================");
+				break;
+			case "6":
+				i = 0;
+				System.out.println("학생수를 입력 하세요 ");
+				int inputScore[] = new int[s.nextInt()];
+				System.out.println("학생 점수 를 입력 하세요 ");
+				for (; i < inputScore.length; i++) {
+					inputScore[i] = s.nextInt();
+					
+				}
+				System.out.println(maxmin.maxmin(inputScore));
+				break;
+			case "7":
+				System.out.println("이름을 입력해 주세요 : [ ]");
+				System.out.println("월급을 입력해 주세요 : [ ]");
+				System.out.println("세율을 입력해 주세요 : [ ]");
+				System.out.println(tax1.tax1(s.next(), s.nextInt(), s.nextDouble()));
+				break;
+			case "8":
+				System.out.println("성명 : ");
+				System.out.println("주민번호 [예 xxxxxx-x] : ");
+				System.out.println(gender.gender(s.next(), s.next()));
+				break;
+			case "9":
+				System.out.println("작업시간 초로 입력 :");
+				System.out.println(timecalc.timecalc(s.nextInt()));
 				break;
 			case "0":
 				JOptionPane.showConfirmDialog(null,"종료하시겠습니다까?");
