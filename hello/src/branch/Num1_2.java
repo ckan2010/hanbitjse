@@ -35,27 +35,25 @@ public class Num1_2 {
 	 * */
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		String name="",name1="",name2="",name3="",
+		String name1="",name2="",name3="",
 			   one="",two="",three="";
-		int    avg=0,avg1=0,avg2=2,avg3=0,result1=0,result2=0,result3=0,i=0;
-		
-		for (i = 1; i <= 3; i++) {
-			System.out.println("이름,점수 입력");
-			name = scanner.next();
-		    avg  = scanner.nextInt();
-		}
+		int    avg1=0,avg2=2,avg3=0,result1=0,result2=0,result3=0;
+				
+		System.out.println("이름,점수 입력");
 	    name1 = scanner.next();
 	    avg1  = scanner.nextInt();
 	    if (avg1>100 || avg1<0){
 	    	System.out.println("학생1 의 평균점수는 0~100점 사이입니다.");
 	    	return;
 	    }
+	    System.out.println("이름,점수 입력");
 	    name2 = scanner.next();
 	    avg2  = scanner.nextInt();
 	    if (avg2>100 || avg2<0){
 	    	System.out.println("학생2 의 평균점수는 0~100점 사이입니다.");
 	    	return;
 	    }
+	    System.out.println("이름,점수 입력");
 	    name3 = scanner.next();
 	    avg3  = scanner.nextInt();
 	    if (avg3>100 || avg3<0){
