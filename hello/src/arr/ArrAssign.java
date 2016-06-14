@@ -13,8 +13,10 @@ import java.util.Scanner;
  */
 public class ArrAssign {
 	public static void main(String[] args) {
-		/***
-		 * 전교생이 몇명인지 몰라요. 전교생 수를 입력받고 학생의 이름과 나이를 입력받고, 이것을 출력하세요
+		/**
+		 * 전교생이 몇명인지 몰라요. 
+		 * 전교생 수를 입력받고 학생의 이름과 나이를 입력받고, 
+		 * 이것을 출력하세요
 		 **/
 		Scanner scanner = new Scanner(System.in);
 		int studCount = 0,i = 0,j = 0;
