@@ -32,7 +32,7 @@ public class Kaup {
 		} else {
 			return name+" 님 BMI 지수 구하기 오류입니다.";
 		}
-		return name+" 은 BMI 지수는 "+ (int)(bmigisu * 100) / 100.0 +" 이고 "+kaupu+" 이다";
+		return name+" 은 BMI 지수는 "+ Double.parseDouble(String.format("%.2f", bmigisu)) +" 이고 "+kaupu+" 이다";
 	}
 
 }
